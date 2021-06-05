@@ -3,10 +3,9 @@
   <head>
     <title>Welcome to Alpha's Website</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href ="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    
   </head>
 
   <header>
@@ -15,17 +14,17 @@
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="projects.html">Projects</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#projects">Projects</a></li>
           <!--<li><a href="experiences.html">Experiences</a></li>-->
+          <li><a href="#contact">Contact</a></li>
           <li><a href="https://github.com/alphaka"> GitHub</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#resume">Resume</a></li>
         </ul>
       </nav>
     </div>
   </header>
   <body>
-
     <!--welcome-->
     <section id="welcome">
       <div class="welcome container">
@@ -57,11 +56,84 @@
           well with colleagues and public of widely differing ages, cultures,
           and nationalities.
         </p>
-        <a href="Resume.pdf">Download Resume</a>
+        <div id="resume"><a href="Resume.pdf">Download Resume</a></div>
       </div>
     </section>
     <!--end about me-->
 
+    <!--Courses-->
+    <section id="courses">
+      <div class="courses container">
+        <div class="courses-top">
+          <h1 class="section-title">Cou<span>r</span>ses</h1>
+          <p>
+            <span>Below, you will discover all the </span>classes I've taken
+            related to my majors.
+          </p>
+        </div>
+        
+         <div class="course-bottom">
+              <div class="courses-item">
+                <div class="icon"><img src="https://img.icons8.com/officel/68/000000/computer.png"/></div>
+                  <h2>Computer Science Courses</h2>
+                  <ul>
+                    <li>Introduction to Java Programming</li>
+                    <li>Introduction to Modern Programming Techniques (OOP)</li>
+                    <li>Discrete Mathematics</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Computers and Ethics</li>
+                    <li>Programming Paradigms in C++</li>
+                  </ul>
+              </div>
+          
+              <div class="courses-item">
+                <div class="icon"><img src="https://img.icons8.com/clouds/110/000000/math-book.png"/></div>
+                <h2>Mathematics Courses</h2>
+                <ul>
+                  <li>Calculus I</li>
+                  <li>Calculus II</li>
+                  <li>Multivariable-Calculus</li>
+                  <li>Linear Algebra</li>
+                  <li>Probability and Statistics I</li>
+                  <li>Differential Equations</li>
+                </ul>
+              </div>
+              
+              <div class="courses-item">
+                <div class="icon"><img src="https://img.icons8.com/office/80/000000/test-tube.png"/></div>
+                  <h2>Science Courses</h2>
+                  <ul>
+                    <li>General Chemistry I</li>
+                    <li>Calculus-Based General Physics I</li>
+                    <li>Calculus-Based General Physics II</li>
+                    <li>Engineering Mechanics</li>
+                    <li>Circuit Analysis</li>
+                    <li>Modern Physics</li>
+                  </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Courses-->
+
+    <!--Projects-->
+    <section id="projects">
+
+    </section>
+    <!--End Projects-->
+
+    <!--Contact-->
+    <section id="contact">
+
+    </section>
+    <!--End Contact-->
+
+    <!--top arrow-->
+    <a class="gotopbtn" href="#"><i class="far fa-arrow-alt-circle-up"></i> </a>
+    <!--end top arrow-->
+
+    <!--Footer-->
     <footer>
       <section class="main-footer">
         <div>
@@ -90,5 +162,6 @@
         </p>
       </section>
     </footer>
+    <!--End Footer-->
   </body>
 </html>

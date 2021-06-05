@@ -3,7 +3,15 @@ In case I would like all padding to be initialized to 0
     margin: 0;
     padding: 0;
 */
-
+html {
+  scroll-behavior: smooth;
+}
+.gototop {
+  width: 100%;
+  height: 300vh;
+  background: url(bg.jpg) no-repeat;
+  background-size: cover;
+}
 body {
   background-image: url("img/web-background.jpg");
   background-size: cover;
@@ -13,7 +21,20 @@ body {
   font-size: 20px;
   text-align: center;
 }
-
+.gotopbtn {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  background: coral;
+  bottom: 50px;
+  right: 50px;
+  border-radius: 50%;
+  text-decoration: none;
+  text-align: center;
+  line-height: 53px;
+  color: white;
+  font-size: 30px;
+}
 /* Welcome Section */
 #welcome {
   position: relative;
@@ -22,7 +43,7 @@ body {
 #welcome .welcome {
   max-width: 1200px;
   margin-top: 100px;
-  padding: 0 50px;
+  padding: 0px 50px;
   justify-content: flex-start;
 }
 #welcome h1 {
@@ -73,24 +94,20 @@ body {
 #main-header {
   text-align: center;
 }
-
 h3 {
   color: rgb(255, 255, 255);
   font-size: 25px;
   padding: 20px;
 }
-
 p2 {
   color: black;
   font-size: 16px;
   /* Spacing the lines*/
   line-height: 1.6em;
 }
-
 p1 {
   font-size: 32px;
 }
-
 .wrapper {
   width: 100%;
   margin: auto; /*Space for the header*/
@@ -113,7 +130,6 @@ p1 {
   font-size: 20px;
   padding-right: 20px;
 }
-
 #main-header {
   background-color: coral;
 }
@@ -132,62 +148,56 @@ p1 {
 #about .section-title span {
   color: coral;
 }
-
 #about .about {
   flex-direction: column-reverse;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 100px 20px;
+  padding-top: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 0px;
 }
-
 #about .col-left {
   margin-top: 50px;
   margin-bottom: 100px;
 }
-
 #about .col-left .about-img img {
   position: relative;
   border-radius: 90%; /* can change it to 25% also*/
   border: 10px solid black;
   margin-bottom: 20px;
 }
-
 #about .col-left .about-img img:hover {
   border: 10px solid white;
 }
-
 #about .col-right {
   width: 100%;
 }
-
 #about .col-right h2 {
   font-size: 1.7rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
 }
-
 #about .col-right p {
   margin-bottom: 20px;
   font-size: 1.25rem;
   color: coral;
 }
-
 #about .role {
   margin-top: 50px;
 }
 #about .role span {
   color: coral;
 }
-
 #about .col-right a {
   text-decoration: none;
   display: inline-block;
   color: rgb(255, 255, 255);
   background-color: coral;
   margin-bottom: 30px;
-  border-radius: 10%; /*10%*/
+  border-radius: 10%;
   border: 6px solid rgb(0, 0, 0);
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -206,7 +216,6 @@ p1 {
 /* End About section */
 
 /* Courses Section*/
-
 #courses .courses {
   flex-direction: column;
   text-align: center;
@@ -225,6 +234,9 @@ p1 {
 }
 #courses .section-title span {
   color: coral;
+}
+#courses .courses-top h1 {
+  color: rgb(255, 255, 255);
 }
 #courses .courses-top p {
   font-size: 1.5rem;
@@ -278,7 +290,6 @@ p1 {
   opacity: 0.8;
   z-index: -1;
 }
-
 /* End Courses Section*/
 
 /* Footer Section*/
@@ -296,7 +307,6 @@ p1 {
 .social span {
   color: coral;
 }
-
 .fa {
   padding: 20px;
   font-size: 30px;
@@ -305,38 +315,25 @@ p1 {
   text-decoration: none;
   border-radius: 50%;
 }
-
 .fa:hover {
   opacity: 0.7;
 }
-
 .fa-facebook {
   background: #3b5998;
   color: white;
 }
-
 .fa-twitter {
   background: #55acee;
   color: white;
 }
-
 .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-
 .fa-instagram {
   background: rgb(232, 92, 70);
   color: white;
 }
-
-/*@media(max-width: 600px){
-    *{
-        width: 100%;
-        float: none;
-    }
-}*/
-
 /* End Footer Section*/
 
 /* Keyframes */
