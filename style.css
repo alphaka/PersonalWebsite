@@ -253,8 +253,12 @@ p1 {
   width: 60%;
   margin: auto;
 }
-#courses ul {
+#courses .courses-item ul {
   list-style-type: none;
+  margin-bottom: 80px;
+}
+#courses .courses-item li {
+  font-size: 1.1rem;
 }
 #courses .courses-item {
   flex-basis: 80%;
@@ -270,6 +274,12 @@ p1 {
   z-index: 1;
   margin-bottom: 80px;
   border: 10px solid black;
+}
+#courses .courses-item h2 {
+  margin-top: 70px;
+  color: rgb(255, 255, 255);
+  font-weight: 1000;
+  font-size: 2rem;
 }
 #courses .courses-item:hover {
   border: 10px solid white;
@@ -331,7 +341,7 @@ p1 {
 }
 #footer .copyright {
   margin-top: 40px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   font-weight: 500;
   font-size: 0.6rem;
 }
