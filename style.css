@@ -6,12 +6,7 @@ In case I would like all padding to be initialized to 0
 html {
   scroll-behavior: smooth;
 }
-.gototop {
-  width: 100%;
-  height: 300vh;
-  background: url(bg.jpg) no-repeat;
-  background-size: cover;
-}
+
 body {
   background-image: url("img/web-background.jpg");
   background-size: cover;
@@ -183,13 +178,13 @@ p1 {
 #about .col-right p {
   margin-bottom: 20px;
   font-size: 1.25rem;
-  color: coral;
+  color: rgb(248, 248, 248);
 }
 #about .role {
   margin-top: 50px;
 }
 #about .role span {
-  color: coral;
+  color: rgb(255, 255, 255);
 }
 #about .col-right a {
   text-decoration: none;
@@ -293,21 +288,21 @@ p1 {
 /* End Courses Section*/
 
 /* Footer Section*/
-.main-footer {
+#footer .footer {
   background: black;
   text-align: center;
   color: #fff;
   padding: 5px;
 }
-.social {
+#footer .social {
   flex-direction: column-reverse;
   text-align: center;
   font-size: 1.5rem;
 }
-.social span {
+#footer .social span {
   color: coral;
 }
-.fa {
+#footer .fa {
   padding: 20px;
   font-size: 30px;
   width: 20px;
@@ -315,24 +310,29 @@ p1 {
   text-decoration: none;
   border-radius: 50%;
 }
-.fa:hover {
+#footer .fa:hover {
   opacity: 0.7;
 }
-.fa-facebook {
+#footer .fa-facebook {
   background: #3b5998;
   color: white;
 }
-.fa-twitter {
+#footer .fa-twitter {
   background: #55acee;
   color: white;
 }
-.fa-linkedin {
+#footer .fa-linkedin {
   background: #007bb5;
   color: white;
 }
-.fa-instagram {
+#footer .fa-instagram {
   background: rgb(232, 92, 70);
   color: white;
+}
+#footer .copyright {
+  margin-top: 30px;
+  font-weight: 500;
+  font-size: 0.6rem;
 }
 /* End Footer Section*/
 
@@ -349,12 +349,12 @@ p1 {
 }
 @keyframes text_reveal {
   100% {
-    color: white;
+    color: coral;
   }
 }
 @keyframes text_reveal_name {
   100% {
-    color: coral;
+    color: rgb(0, 0, 0);
     font-weight: 500;
   }
 }
