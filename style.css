@@ -58,7 +58,7 @@ p1 {
   background-color: black;
   /*Getting rid of the bullet-points*/
   list-style: none;
-  padding-bottom: 1.5%;
+  padding-bottom: 0.35%;
 }
 
 /*printing the tags inline*/
