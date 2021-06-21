@@ -5,14 +5,22 @@ In case I would like all padding to be initialized to 0
 */
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
-
+.toggler {
+  display: none;
+}
 body {
-  background-image: url("img/web-background.jpg");
-  background-size: cover;
+  /*background-image: url("https://images.unsplash.com/photo-1603621831485-469ef6582533?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=975&q=80");
+  
+  img/web-background.jpg
+  https://images.unsplash.com/photo-1623721947935-16ae63095d1d?ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4NHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60
+  */
+  background-color: #fff;
+  /* background-size: cover; */
   background-position: top center;
   position: relative;
-  font-family: Times, serif, "Times New Roman";
+  font-family: "Roboto", sans-serif;
   font-size: 20px;
   text-align: center;
 }
@@ -52,15 +60,14 @@ p2 {
 p1 {
   font-size: 32px;
 }
-.wrapper {
+.wrapper,
+nav {
   width: 100%;
   margin: auto; /*Space for the header*/
   background-color: black;
-  /*Getting rid of the bullet-points*/
   list-style: none;
   padding-bottom: 0.35%;
 }
-
 /*printing the tags inline*/
 .wrapper li {
   display: inline;
@@ -81,6 +88,17 @@ p1 {
   position: relative;
   transition: 0.3s;
 }
+.wrapper .navbar-toggler {
+  background-color: white;
+  border-radius: 10px;
+}
+@media (min-width: 992px) {
+  .wrapper .navbar-collapse {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 #main-header {
   background-color: coral;
 }
@@ -103,7 +121,7 @@ p1 {
   font-weight: 500;
   display: block;
   width: fit-content;
-  font-size: 3rem;
+  font-size: 2.2rem;
   position: relative;
   color: transparent;
   animation: text_reveal 0.5s ease forwards;
@@ -141,7 +159,7 @@ p1 {
 /* End Welcome Section */
 /* Header Section*/
 #about .section-title {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   color: black;
   margin-bottom: 10px;
@@ -171,7 +189,7 @@ p1 {
   border-radius: 90%; /* can change it to 25% also*/
   border: 10px solid black;
   margin-bottom: 20px;
-  transition: 0.6s;
+  transition: 0.3s;
 }
 #about .col-left .about-img img:hover {
   border: 10px solid white;
@@ -181,21 +199,21 @@ p1 {
   width: 100%;
 }
 #about .col-right h2 {
-  font-size: 1.7rem;
+  font-size: 1.3rem;
   font-weight: 500;
   letter-spacing: 0.2rem;
   margin-bottom: 10px;
 }
 #about .col-right p {
   margin-bottom: 20px;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   color: rgb(0, 0, 0);
 }
 #about .role {
   margin-top: 50px;
 }
 #about .role span {
-  color: rgb(255, 255, 255);
+  color: coral;
 }
 #about .col-right a {
   text-decoration: none;
@@ -203,9 +221,9 @@ p1 {
   color: rgb(255, 255, 255);
   background-color: coral;
   margin-bottom: 30px;
-  border-radius: 10%;
+  border-radius: 10px;
   border: 6px solid rgb(0, 0, 0);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   letter-spacing: 0.1 rem;
   margin-top: 100px;
@@ -213,164 +231,148 @@ p1 {
   transition: 0.3s ease;
   transition-property: background-color, color;
   padding: 10px 30px;
-  transition: 0.6s;
+  transition: 0.4s;
 }
 #about .col-right a:hover {
   background-color: rgb(255, 255, 255);
   color: black;
   border: 6px solid coral;
   transform: scale(1.1);
+  transform: translateY(-10px);
 }
 /* End About section */
-
-/* Courses Section*/
-#courses .courses {
-  flex-direction: column;
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 100px 0;
-}
-#courses .section-title {
-  font-size: 3rem;
+/* Courses Section  */
+#courses .courses-container {
+  font-size: 1.5rem;
   font-weight: 300;
   color: black;
   margin-bottom: 100px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   text-align: center;
+  margin: inherit;
 }
 #courses .courses-top h1 {
   color: rgb(0, 0, 0);
 }
 #courses .courses-top p {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin-top: 20px;
   margin-bottom: 80px;
   line-height: 2.5rem;
   font-weight: 300;
   letter-spacing: 0.05rem;
 }
-#courses .courses-top h1 span {
+#courses .courses-top h1 span,
+p span {
   color: coral;
 }
-#courses .courses-top p span {
-  color: white;
-}
-#courses .course-bottom {
+#courses {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  width: 60%;
-  margin: auto;
+  text-align: center;
+  min-height: 100vh;
 }
-#courses .courses-item ul {
-  list-style-type: none;
-  margin-bottom: 50px;
-}
-#courses .courses-item li {
-  font-size: 1.1rem;
-}
-#courses .courses-item {
-  flex-basis: 80%;
+#courses .course-bottom {
+  background-color: coral;
+  border-radius: 10px;
+  padding: 15px 25px;
+  max-width: 960px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  padding: 30px;
-  border-radius: 50px;
-  background-image: url("img/course.jpg");
-  background-size: cover;
-  margin: 10px 5%;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 80px;
-  border: 10px solid black;
-  transition: 0.6s;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 20px;
 }
-#courses .courses-item .icon img {
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  transform: rotate(-35deg);
+#courses .course-bottom .courses-item {
+  border-bottom: 4px solid rgba(255, 255, 255, 0.863);
 }
-#courses .courses-item h2 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: rgb(255, 255, 255);
-  font-weight: 1000;
-  font-size: 2rem;
+#courses .course-bottom .courses-item:last-child {
+  border-bottom: none;
 }
-#courses .courses-item:hover {
-  border: 10px solid white;
-  transform: scale(1.1);
+#courses .course-bottom .courses-item img {
+  margin-bottom: 25px;
+  margin-top: 50px;
+  max-width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  width: 130px;
 }
-#courses .courses-item::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(60deg, #29323c 0%, 485563 100%);
-  opacity: 0.8;
-  z-index: -1;
+#courses .course-bottom .courses-item h2 {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background-color: #000000;
+  background-size: contain;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+#courses .course-bottom .courses-item ul {
+  margin: 50px 0 70px;
+  list-style: none;
+  padding: 0;
+}
+#courses .course-bottom .courses-item li {
+  letter-spacing: 2px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 1px;
+  text-decoration: underline;
 }
 /* End Courses Section*/
-
 /* Footer Section*/
 #footer .footer {
-  background: black;
   text-align: center;
-  color: #fff;
-  padding: 5px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  background-color: #ffffff5e;
 }
 #footer .social {
-  flex-direction: column-reverse;
-  text-align: center;
-  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
 }
-#footer .social span {
-  color: coral;
-}
-#footer .fa {
-  padding: 20px;
-  font-size: 30px;
-  width: 20px;
-  text-align: center;
+#footer a {
+  margin: 0 10px;
+  margin-bottom: 30px;
   text-decoration: none;
-  border-radius: 50%;
-  opacity: 0.5;
 }
-#footer .fa:hover {
-  transform: scale(1.1);
-  transition: 0.4s;
-  opacity: 1;
+#footer a:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s;
+}
+#footer p {
+  font-size: 0.45rem;
+}
+#footer p i {
+  color: #e63946;
 }
 #footer .fa-facebook {
-  background: #3b5998;
-  color: white;
+  color: #3b5998;
 }
 #footer .fa-twitter {
-  background: #55acee;
-  color: white;
+  color: #55acee;
+  padding: 4px;
 }
-#footer .fa-linkedin {
-  background: #007bb5;
-  color: white;
+#footer .fa-github {
+  color: black;
 }
 #footer .fa-instagram {
-  background: rgb(232, 92, 70);
   color: white;
+  padding: 4px;
+  background-color: rgb(221, 77, 76);
+  border-radius: 50%;
 }
-#footer .copyright {
-  margin-top: 40px;
-  margin-bottom: 100px;
-  font-weight: 500;
-  font-size: 0.6rem;
+#footer .fa-linkedin {
+  background: rgb(10, 102, 194);
+  color: #fff;
+  padding: 4px;
+  border-radius: 2px;
 }
-/* End Footer Section*/
 
+/* End Footer Section*/
 /* Keyframes */
 @keyframes text_reveal_box {
   50% {
@@ -394,3 +396,27 @@ p1 {
   }
 }
 /* End Keyframes */
+/* Media 749px */
+@media (min-width: 900px) {
+  /* Courses */
+  #courses .course-bottom {
+    flex-direction: row;
+    height: 85vh;
+  }
+  #courses .course-bottom .courses-item {
+    border-bottom: none;
+    border-right: 4px solid rgba(255, 255, 255, 0.863);
+    padding: 25px 30px;
+    width: calc(100% / 3);
+  }
+  #courses .course-bottom .courses-item:last-child {
+    border-right: none;
+    padding-right: 10px;
+  }
+  #courses .course-bottom .courses-item:first-child {
+    padding-left: 10px;
+  }
+  #courses .course-bottom .courses-item li {
+    padding: 10px;
+  }
+}

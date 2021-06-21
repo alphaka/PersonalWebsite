@@ -2,25 +2,36 @@
 <html>
   <head>
     <title>Welcome to Alpha's Website</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    
     <link rel="stylesheet" href ="https://use.fontawesome.com/releases/v5.4.1/css/all.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
-   
-  </head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="style.css" />
+<!-- <script src="script.js"></script> -->
+</head>
 
   <header>
     <div class="wrapper">
       <h3 id="main-header">Alpha Kaba</h3>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <!--<li><a href="experiences.html">Experiences</a></li>-->
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="https://github.com/alphaka"> GitHub</a></li>
-          <li><a href="#resume">Resume</a></li>
-        </ul>
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <ul class="collapse navbar-collapse p-0 m-0" id="navbarNav">
+              <li><a class="nav-link" href="index.html">Home</a></li>
+              <li><a class="nav-link" href="#resume">Resume</a></li>
+              <li><a class="nav-link" href="#courses">Courses</a></li>
+              <li><a class="nav-link" href="#projects">Projects</a></li>
+              <!--<li><a class="nav-link" href="experiences.html">Experiences</a></li>-->
+              <li><a class="nav-link" href="#contact">Contact</a></li>
+              <!-- <li><a class="nav-link" href="https://github.com/alphaka"> GitHub</a></li> -->
+            
+          </ul>
       </nav>
     </div>
   </header>
@@ -63,7 +74,7 @@
 
     <!--Courses-->
     <section id="courses">
-      <div class="courses container">
+      <div class="courses-container">
         <div class="courses-top">
           <h1 class="section-title">Cou<span>r</span>ses</h1>
           <p>
@@ -74,12 +85,12 @@
         
          <div class="course-bottom">
               <div class="courses-item">
-                <div class="icon"><img src="img/completed.jpeg" alt="completed.img"/></div>
-                  <h2>Computer Science Courses</h2>
+                <img src="/img/cs.png" alt="courses.img"/>
+                  <h2>Computer Science</h2>
                   <ul>
                     <li>Data Structures and Algorithms</li>
                     <li>Introduction to Modern Programming Techniques (OOP)</li>
-                    <li>Computers and Ethics</li>
+                    <li>Computers and Ehics</li>
                     <li>Programming Paradigms in C++</li>
                     <li>Discrete Mathematics</li>
                     <li>Introduction to Java Programming</li>
@@ -87,8 +98,8 @@
               </div>
           
               <div class="courses-item">
-                <div class="icon"><img src="img/completed.jpeg" alt="completed.img"/></div>
-                <h2>Mathematics Courses</h2>
+                <img src="/img/math.png" alt="courses.img"/>
+                <h2>Mathematics</h2>
                 <ul>
                   <li>Linear Algebra</li>
                   <li>Probability and Statistics I</li>
@@ -100,8 +111,8 @@
               </div>
               
               <div class="courses-item">
-                <div class="icon"><img src="img/completed.jpeg" alt="completed.img"/></div>
-                  <h2>Science Courses</h2>
+                  <img src="/img/physics.png" alt="courses.img"/>
+                  <h2>Science</h2>
                   <ul>
                     <li>Circuit Analysis</li>
                     <li>Engineering Mechanics</li>
@@ -137,11 +148,13 @@
     <footer>
       <section id="footer">
         <div class="footer">
-          <p class ="social">Follow <span>Me</span></p>
+          <p class="social">Follow <span>Me</span></p>
+
           <a
+            class="fab fa-facebook"
             href="https://www.facebook.com/profile.php?id=100003481549572"
-            class="fa fa-facebook"
           ></a>
+          <a class="fa fa-github" href="https://github.com/alphaka"></a>
           <a
             href="https://twitter.com/AlphaKabinetKa9"
             class="fa fa-twitter"
@@ -154,11 +167,19 @@
             href="https://www.linkedin.com/in/alphak/"
             class="fa fa-linkedin"
           ></a>
-          <p class="copyright"> Copyright &copy; 2021 Alpha. All Rights Reserved. Made in NYC with
-            <img src="https://img.icons8.com/color/14/000000/filled-like.png"/></p>
-        </div> 
+          <p class="copyright">
+            Copyright &copy; 2021 Alpha Kaba. All rights reserved. Made with
+            <i class="fas fa-heart hover-white"></i> &amp;
+            <i class="fas fa-coffee"></i> in NYC
+          </p>
+        </div>
       </section>
     </footer>
     <!--End Footer-->
+
+    <!-- Bootstrap JS and JQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
   </body>
 </html>
