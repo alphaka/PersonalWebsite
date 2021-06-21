@@ -41,6 +41,7 @@ body {
 .gotopbtn:hover {
   transform: scale(1.2);
   transition: 0.4s;
+  color: white;
 }
 /* Nagivation Section */
 #main-header {
@@ -398,7 +399,6 @@ p span {
 /* End Keyframes */
 /* Media 749px */
 @media (min-width: 900px) {
-  /* Courses */
   #courses .course-bottom {
     flex-direction: row;
     height: 85vh;
